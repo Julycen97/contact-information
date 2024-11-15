@@ -24,10 +24,12 @@ body {
     flex-direction: column;
     align-items: center;
     grid-area: H;
-    height: 14vh;
+    height: 10vh;
+    min-height: 4.5rem;
     background-color:#1a1a1a;
     color: white;
     text-align: center;
+    align-self: center;
 }
 
 .main {
@@ -37,7 +39,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    min-height: 76vh;
+    min-height: 25rem;
     background-image: url("../images/background-body.jpg");
     background-size: cover;
     background-position: center;
@@ -49,10 +51,11 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: center;
-    min-height: 10vh;
-    max-height: 10vh;
+    align-self: center;
+    min-height: 2rem;
+    max-height: 2rem;
     color: white;
+    position: sticky;
 }
 
 a{
@@ -77,6 +80,19 @@ a:hover{
     "F F F F";
 }
 
+.header div{
+    width: 100%;
+}
+
+.header h1{
+    font-size: 2.4rem;
+}
+
+.header h2{
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
 .cardContainer{
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +113,8 @@ a:hover{
     min-width: 20vw;
     max-width: 50rem;
     width: 50vw;
-    min-height: 10vh;
+    height: 10vh;
+    min-height: 3.5rem;
     max-height: 15rem;
     transition: all 200ms ease-in-out;
     opacity: 0.7;
@@ -129,6 +146,12 @@ a:hover{
     opacity: 1;
 }
 
+.card:hover a{
+    color: white;
+    font-size: x-large;
+    -webkit-text-stroke: 0.5px black;
+}
+
 #cardInsta{
     background: linear-gradient(to left bottom, #c743ff, #fc36ef, #f55555, #fabb64, #fffa68);
 }
@@ -141,10 +164,21 @@ a:hover{
     background: linear-gradient(to left bottom, #2e2f30, #575757, #848e99, #2e2f30, #000000);
 }
 
-#cardWaI, #cardWaII{
-    background: linear-gradient(to left bottom, #58ff6e, #A7FFA4, #58ff6e, #A7FFA4, #58ff6e);
+#cardYou{
+    background: linear-gradient(to left bottom, #ff0000, #ff6161, #ff0000, #ff6161, #ff0000);
 }
 
+#cardTwitch{
+    background: linear-gradient(to left bottom, #a228ff, #c476ff, #a228ff, #c476ff, #a228ff);
+}
+
+.footerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: large;
+}
 @keyframes sombrear {
     0%{
         box-shadow:
@@ -183,15 +217,13 @@ a:hover{
     }
 }
 
-.card:hover a{
-    color: white;
-    font-size: x-large;
-    -webkit-text-stroke: 0.5px black;
-}
-
 @media screen and (max-width: 450px) {
-    h1{
-        font-size: 1.7rem;
+    .header h1{
+        font-size: 2rem;
+    }
+
+    .header h2{
+        font-size: 1rem;
     }
 
     .footerContent span{
@@ -204,8 +236,12 @@ a:hover{
 }
 
 @media screen and (max-width: 350px) {
-    h1{
+    .header h1{
         font-size: 1.5rem;
+    }
+
+    .header h2{
+        font-size: 0.8rem;
     }
 
     .card a i{
