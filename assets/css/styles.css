@@ -1,0 +1,212 @@
+:root{
+    font-size: 1em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: H;
+    height: 14vh;
+    background-color:#1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.main {
+    grid-area: M;
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 76vh;
+    background: linear-gradient(to top, #1a1a1a, white, white, #1a1a1a);
+}
+
+.footer{
+    grid-area: F;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 10vh;
+    max-height: 10vh;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rebeccapurple;
+}
+
+.body{
+    display: grid;
+    grid-template-areas: 
+    "H H H H"
+    "M M M M"
+    "M M M M"
+    "F F F F";
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    flex-direction: column;
+    min-width: 20vw;
+    max-width: 50rem;
+    width: 50vw;
+    min-height: 10vh;
+    max-height: 15rem;
+    transition: all 200ms ease-in-out;
+    opacity: 0.7;
+}
+
+.card a{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+    text-shadow: 3px 3px 10px white;
+}
+
+.card a i{
+    font-size: xx-large;
+    margin-right: 40px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    animation: sombrear 3s infinite;
+    animation-direction: alternate;
+    box-shadow: 5px 5px 10px black, -5px -5px 10px black;
+    color: white;
+    border: 0.5px solid black;
+    opacity: 1;
+}
+
+#cardInsta{
+    background: linear-gradient(to left bottom, #c743ff, #fc36ef, #f55555, #fabb64, #fffa68);
+}
+
+#cardFace{
+    background: linear-gradient(to left bottom, #5d87da, #A4ADFF, #5d87da, #A4ADFF, #5d87da);
+}
+
+#cardX{
+    background: linear-gradient(to left bottom, #2e2f30, #575757, #848e99, #2e2f30, #000000);
+}
+
+#cardWaI, #cardWaII{
+    background: linear-gradient(to left bottom, #58ff6e, #A7FFA4, #58ff6e, #A7FFA4, #58ff6e);
+}
+
+@keyframes sombrear {
+    0%{
+        box-shadow:
+        3px 0 13px black,
+        0 3px 13px whitesmoke,
+        -3px 0 13px black,
+        0 -3px 13px whitesmoke;
+    }
+    25%{
+        box-shadow:
+        3px 0 13px whitesmoke,
+        0 3px 13px black,
+        -3px 0 13px whitesmoke,
+        0 -3px 13px black;
+    }
+    50%{
+        box-shadow:
+        3px 0 13px black,
+        0 3px 13px whitesmoke,
+        -3px 0 13px black,
+        0 -3px 13px whitesmoke;
+    }
+    75%{
+        box-shadow:
+        3px 0 13px whitesmoke,
+        0 3px 13px black,
+        -3px 0 13px whitesmoke,
+        0 -3px 13px black;
+    }
+    100%{
+        box-shadow:
+        3px 0 13px black,
+        0 3px 13px whitesmoke,
+        -3px 0 13px black,
+        0 -3px 13px whitesmoke;
+    }
+}
+
+.card:hover a{
+    color: white;
+    font-size: x-large;
+    -webkit-text-stroke: 0.5px black;
+}
+
+@media screen and (max-width: 450px) {
+    h1{
+        font-size: 1.7rem;
+    }
+
+    .footerContent span{
+        font-size: 0.8rem;
+    }
+
+    .card a i{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .card a i{
+        font-size: x-large;
+        margin-right: 0;
+    }
+}
