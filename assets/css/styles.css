@@ -38,7 +38,10 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 76vh;
-    background: linear-gradient(to top, #1a1a1a, white, white, #1a1a1a);
+    background-image: url("../images/background-body.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .footer{
