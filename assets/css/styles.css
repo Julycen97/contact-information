@@ -32,9 +32,22 @@ body {
     align-self: center;
 }
 
+.cardContainer{
+    grid-area: CC;
+}
+
+.imgHome{
+    grid-area: IH;
+}
+
 .main {
     grid-area: M;
-    display: flex;
+    display: grid;
+    grid-template-areas:
+    "IH IH CC CC"
+    "IH IH CC CC"
+    "IH IH CC CC"
+    "IH IH CC CC";
     background-color: black;
     justify-content: space-around;
     align-items: center;
@@ -44,6 +57,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 0.5s linear;
 }
 
 .footer{
@@ -91,6 +105,17 @@ a:hover{
 .header h2{
     font-size: 1.2rem;
     margin-top: 5px;
+}
+
+.imgHome{
+    width: 30vw;
+    height: 70vh;
+    background: url("../images/sumo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: brightness(1.1);
+    margin: auto;
 }
 
 .cardContainer{
@@ -214,6 +239,27 @@ a:hover{
         0 3px 13px whitesmoke,
         -3px 0 13px black,
         0 -3px 13px whitesmoke;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .imgHome{
+        width: 0;
+        height: 0;
+       display: none;
+    }
+
+    .main{
+        grid-template-areas: 
+        "CC CC CC CC"
+        "CC CC CC CC"
+        "CC CC CC CC"
+        "CC CC CC CC";
+        justify-content: center;
+        background: url("../images/sumo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
