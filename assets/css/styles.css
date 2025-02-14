@@ -110,12 +110,12 @@ a:hover{
 .imgHome{
     width: 30vw;
     height: 70vh;
-    background: url("../images/sumo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     filter: brightness(1.1);
     margin: auto;
+    transition: background-image 0.5s linear;
 }
 
 .cardContainer{
@@ -204,6 +204,7 @@ a:hover{
     color: white;
     font-size: large;
 }
+
 @keyframes sombrear {
     0%{
         box-shadow:
